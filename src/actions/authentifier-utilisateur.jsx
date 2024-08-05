@@ -10,14 +10,14 @@ import {
   LOGOUT
 } from './types';
 
-// On charge les données utilisateur à partir de ./authentification
+// On charge les données utilisateur à partir de ./auth
 export const loadUser = () => async (dispatch) => {
   try {
-    const res = await api.get('/auth');
+   const res = await api.get('/auth');
 
     dispatch({ // en cas de succès, envoyer les données utilisateur
       type: USER_LOADED,
-      payload: res.data
+     payload: res.data
     });
   } catch (err) {
     dispatch({ // en cas d'échec, une action AUTH_ERROR est envoyée
@@ -33,7 +33,7 @@ export const register = (formData) => async (dispatch) => {
 
     dispatch({ // en cas de succès, une action est envoyée avec les données utilisateur et loadUser charge ces données
       type: REGISTER_SUCCESS,
-      payload: res.data
+     payload: res.data
     });
     dispatch(loadUser());
   } catch (err) { 
@@ -54,11 +54,11 @@ export const login = (email, password) => async (dispatch) => {
   const body = { email, password };
 
   try {
-    const res = await api.post('/auth', body);
+   const res = await api.post('/auth', body);
 
     dispatch({
       type: LOGIN_SUCCESS,
-      payload: res.data
+     payload: res.data
     });
 
     dispatch(loadUser());

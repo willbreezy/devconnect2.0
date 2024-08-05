@@ -47,7 +47,7 @@ const PageTableaudebord = ({
       ) : {/* Sinon il invite l'utilisateur à créer un profil avec un lien vers la page de création de profil */}
       (
         <>
-          <p>Attendez, vous n'avez pas encore configuré de profil, ajoutez quelques informations je vous prie</p>
+          <p>Attendez, vous n'avez pas encore configuré de profil, ajoutez quelques informations...</p>
           <Link to="/create-profile" className="btn btn-primary my-1">
             Créer votre profil
           </Link>

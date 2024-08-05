@@ -58,20 +58,19 @@ const PageInscription = ({ setAlert, register, isAuthenticated }) => {
         <div className="form-group">
           <input
             type="email"
-            placeholder="Ainsi que votre adresse email"
+            placeholder="Insérez votre adresse email"
             name="email"
             value={email}
             onChange={onChange}
           />
           <small className="form-text">
-            Ce site est magnifique, n'est-ce pas, et si vous insériez votre plus belle 
-            photo !?
+            Ce site est magnifique, n'est-ce pas !
           </small>
         </div>
         <div className="form-group">
           <input
             type="password"
-            placeholder="Et votre mot de passe je vous prie"
+            placeholder="Insérez votre mot de passe "
             name="password"
             value={password}
             onChange={onChange}

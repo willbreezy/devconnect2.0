@@ -1,7 +1,7 @@
 /**
  *   est un composant de routage utilisé pour protéger certaines routes afin 
  *    qu'elles ne soient accessibles qu'aux utilisateurs authentifiés.
- */
+ *
 import React from 'react';
 import { Navigate } from 'react-router-dom';
 import PropTypes from 'prop-types';
@@ -27,3 +27,5 @@ const mapStateToProps = (state) => ({
 });
 
 export default connect(mapStateToProps)(RoutePrivee);
+
+*/
