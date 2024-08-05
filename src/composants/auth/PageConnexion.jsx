@@ -10,7 +10,7 @@ import { connect } from 'react-redux'; // pour connecter le composant à Redux
 import PropTypes from 'prop-types'; // pour valider les props
 import { login } from '../../actions/authentifier-utilisateur'; // pour l'action de connexion
 
-const Connexion = ({ login, isAuthenticated }) => {
+const PageConnexion = ({ login, isAuthenticated }) => {
   const [formData, setFormData] = useState({ // formData est l'état local qui contient email et password
     email: '',
     password: ''
@@ -68,7 +68,7 @@ const Connexion = ({ login, isAuthenticated }) => {
   );
 };
 
-Connexion.propTypes = {
+PageConnexion.propTypes = {
   login: PropTypes.func.isRequired,
   isAuthenticated: PropTypes.bool
 };
@@ -77,4 +77,4 @@ const mapStateToProps = (state) => ({
   isAuthenticated: state.auth.isAuthenticated
 });
 
-export default connect(mapStateToProps, { login })(Connexion);
+export default connect(mapStateToProps, { login })(PageConnexion);

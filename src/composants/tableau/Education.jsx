@@ -1,0 +1,54 @@
+/**
+ * Ce composant permet d'afficher la liste des diplomes d'études d'un utilisateur 
+ * et permet de supprimer un diplome spécifique.
+ */
+
+import React, { Fragment } from 'react';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import { deleteEducation } from '../../actions/profil';
+import formatDate from '../../utils/formatDate'; // fonction utilitaire pour formater les dates
+
+const Education = ({ education, deleteEducation }) => {
+  const educations = education.map((edu) => ( // crée une ligne de tableau pour chaque diplome avec un bouton pour supprimer
+    <tr key={edu._id}>
+      <td>{edu.school}</td>
+      <td className="hide-sm">{edu.degree}</td>
+      <td>
+        {formatDate(edu.from)} - {edu.to ? formatDate(edu.to) : 'Maintenant'}
+      </td>
+      <td>
+        <button
+          onClick={() => deleteEducation(edu._id)}
+          className="btn btn-danger"
+        >
+          Supprimer
+        </button>
+      </td>
+    </tr>
+  ));
+
+  return (
+    <Fragment>
+      <h2 className="my-2">Diplomes d'études</h2>
+      <table className="table">
+        <thead>
+          <tr>
+            <th>Ecole</th>
+            <th className="hide-sm">Diplome universitaire</th>
+            <th className="hide-sm">Années</th>
+            <th />
+          </tr>
+        </thead>
+        <tbody>{educations}</tbody>
+      </table>
+    </Fragment>
+  );
+};
+
+Education.propTypes = {
+  education: PropTypes.array.isRequired,
+  deleteEducation: PropTypes.func.isRequired
+};
+
+export default connect(null, { deleteEducation })(Education);

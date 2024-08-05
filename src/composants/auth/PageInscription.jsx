@@ -12,7 +12,7 @@ import { setAlert } from '../../actions/alertes';
 import { register } from '../../actions/alertes';
 import PropTypes from 'prop-types';
 
-const Inscription = ({ setAlert, register, isAuthenticated }) => {
+const PageInscription = ({ setAlert, register, isAuthenticated }) => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -95,7 +95,7 @@ const Inscription = ({ setAlert, register, isAuthenticated }) => {
   );
 };
 
-Inscription.propTypes = {
+PageInscription.propTypes = {
   setAlert: PropTypes.func.isRequired,
   register: PropTypes.func.isRequired,
   isAuthenticated: PropTypes.bool
@@ -105,4 +105,4 @@ const mapStateToProps = (state) => ({
   isAuthenticated: state.auth.isAuthenticated
 });
 
-export default connect(mapStateToProps, { setAlert, register })(Inscription);
+export default connect(mapStateToProps, { setAlert, register })(PageInscription);

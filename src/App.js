@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './components/layout/Navbar';
-import Landing from './components/layout/Landing';
-import Register from './components/auth/Register';
-import Login from './components/auth/Login';
-import Alert from './components/layout/Alert';
-import Dashboard from './components/dashboard/Dashboard';
+import PageAccueil from './composants/miseenpage/PageAccueil';
+import PageInscription from './composants/auth/PageInscription';
+import PageConnexion from './composants/auth/PageConnexion';
+import Alerte from './composants/miseenpage/Alerte';
+import PageTableaudebord from './composants/tableau/PageTableaudebord';
 import ProfileForm from './components/profile-forms/ProfileForm';
 import AddExperience from './components/profile-forms/AddExperience';
 import AddEducation from './components/profile-forms/AddEducation';
@@ -13,14 +13,14 @@ import Profiles from './components/profiles/Profiles';
 import Profile from './components/profile/Profile';
 import Posts from './components/posts/Posts';
 import Post from './components/post/Post';
-import NotFound from './components/layout/NotFound';
+import PageNontrouvee from './composants/miseenpage/PageNonTrouvee';
 import PrivateRoute from './components/routing/PrivateRoute';
 import { LOGOUT } from './actions/types';
 
 // Redux
 import { Provider } from 'react-redux';
 import store from './store';
-import { loadUser } from './actions/auth';
+import { loadUser } from './actions/authentifier-utilisateur';
 import setAuthToken from './utils/setAuthToken';
 
 import './App.css';
@@ -46,16 +46,16 @@ const App = () => {
     <Provider store={store}>
       <Router>
         <Navbar />
-        <Alert />
+        <Alerte />
         <Routes>
-          <Route path="/" element={<Landing />} />
-          <Route path="register" element={<Register />} />
-          <Route path="login" element={<Login />} />
+          <Route path="/" element={<PageAccueil />} />
+          <Route path="register" element={<PageInscription />} />
+          <Route path="login" element={<PageConnexion />} />
           <Route path="profiles" element={<Profiles />} />
           <Route path="profile/:id" element={<Profile />} />
           <Route
             path="dashboard"
-            element={<PrivateRoute component={Dashboard} />}
+            element={<PrivateRoute component={PageTableaudebord} />}
           />
           <Route
             path="create-profile"
@@ -75,7 +75,7 @@ const App = () => {
           />
           <Route path="posts" element={<PrivateRoute component={Posts} />} />
           <Route path="posts/:id" element={<PrivateRoute component={Post} />} />
-          <Route path="/*" element={<NotFound />} />
+          <Route path="/*" element={<PageNontrouvee />} />
         </Routes>
       </Router>
     </Provider>
