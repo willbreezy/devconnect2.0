@@ -5,7 +5,7 @@
  import React, { useEffect } from 'react';
  import PropTypes from 'prop-types';
  import { connect } from 'react-redux';
- import AfficherpostIndviduel from './AfficherpostIndviduel';
+ import Afficherpostindividuel from './Afficherpostindviduel'
  import Creerpublication from './Creerpublication';
  import { getPosts } from '../../actions/post';
  
@@ -25,7 +25,7 @@
        <Creerpublication />
        <div className="posts">
          {posts.map((post) => ( // Les posts sont mappés et chaque post est rendu en utilisant le composant Afficherpostindividuel.
-           <AfficherpostIndviduel key={post._id} post={post} />
+           <Afficherpostindividuel key={post._id} post={post} />
          ))}
        </div>
      </section>

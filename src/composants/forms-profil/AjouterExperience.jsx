@@ -6,7 +6,7 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { addExperience } from '../../actions/profile';
+import { addExperience } from '../../actions/profil';
 
 const AjouterExperience = ({ addExperience }) => {
   const navigate = useNavigate();

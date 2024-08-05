@@ -9,7 +9,7 @@ import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import { Link, Navigate } from 'react-router-dom';
 import { setAlert } from '../../actions/alertes';
-import { register } from '../../actions/alertes';
+import { register } from '../../actions/authentifier-utilisateur';
 import PropTypes from 'prop-types';
 
 const PageInscription = ({ setAlert, register, isAuthenticated }) => {

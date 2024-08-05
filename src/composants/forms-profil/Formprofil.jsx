@@ -5,7 +5,7 @@ import React, { Fragment, useState, useEffect } from 'react';
 import { Link, useMatch, useNavigate } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { createProfile, getCurrentProfile } from '../../actions/profile';
+import { createProfile, getCurrentProfile } from '../../actions/profil';
 
 // Déclarer initialState en dehors du composant pour éviter de déclencher un useEffect
 const initialState = {

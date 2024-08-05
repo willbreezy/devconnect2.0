@@ -1,5 +1,5 @@
 import api from '../utils/api';
-import { setAlert } from './alert';
+import { setAlert } from './alertes';
 import {
   GET_POSTS,
   POST_ERROR,

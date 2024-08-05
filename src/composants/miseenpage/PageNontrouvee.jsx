@@ -1,5 +1,5 @@
 /**
- * Le composant NotFound est utilisé pour afficher une page d'erreur lorsque 
+ * Le composant est utilisé pour afficher une page d'erreur lorsque 
  * l'utilisateur essaie d'accéder à une page qui n'existe pas.
  */
 import React from 'react';

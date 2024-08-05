@@ -8,7 +8,7 @@ import PropTypes from 'prop-types';
 import { Link, useParams } from 'react-router-dom';
 import { connect } from 'react-redux';
 import PageChargement from '../miseenpage/PageChargement';
-import PostItem from '../posts/PostItem';
+import Afficherpostindviduel from '../posts/Afficherpostindviduel';
 import Laissercommentaire from './Laissercommentaire';
 import Affichercommentaire from './Affichercommentaire';
 import { getPost } from '../../actions/post';
@@ -28,7 +28,7 @@ const Afficherpublication = ({ getPost, post: { post, loading } }) => {
         Retour aux publications
       </Link>
       {/*Affiche le post en utilisant le composant PostItem*/}
-      <PostItem post={post} showActions={false} />
+      <Afficherpostindviduel post={post} showActions={false} />
       {/**Affiche le composant Laissercommentaire pour ajouter un nouveau commentaire au post. */}
       <Laissercommentaire postId={post._id} />
       <div className="comments">
