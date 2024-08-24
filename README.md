@@ -28,7 +28,8 @@ DevConnect est une application web de réseau social pour développeurs, permett
 DevConnect utilise les technologies suivantes :
 
 - **Frontend** : HTML, CSS, JavaScript, React
-- **Base de données** : Firebase
+- **Backend** : C# 
+- **Base de données** : SQLite
 - **Autres** : Axios pour les requêtes HTTP, Material-UI pour les composants UI
 
 ## Installation
@@ -36,7 +37,7 @@ DevConnect utilise les technologies suivantes :
 ### Prérequis
 
 - Node.js (version 14 ou supérieure)
-- Firebase 
+- DotNet
 
 ### Étapes
 
