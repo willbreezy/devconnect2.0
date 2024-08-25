@@ -26,6 +26,7 @@ namespace backend.data
             if (!optionsBuilder.IsConfigured)
             {
                 // Configure SQLite as the database provider
+                
                 optionsBuilder.UseSqlite("Data Source=devconnect.db; Pooling=True; Max Pool Size=100; Min Pool Size=5;");
             }
         }
