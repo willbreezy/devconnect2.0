@@ -1,0 +1,4 @@
+{
+    "dotnet.defaultSolution": "DevConnect.sln",
+    "editor.codeActions.triggerOnFocusChange": true
+}
