@@ -3486,19 +3486,19 @@
     ]
   },
   "packageFolders": {
-    "/home/breezy/.nuget/packages/": {}
+    "C:\\Users\\joan_\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/media/breezy/Disk3/DevConnect/devconnect2.0/backend/backend.csproj",
+      "projectUniqueName": "F:\\Github\\devconnect2.0\\backend\\backend.csproj",
       "projectName": "backend",
-      "projectPath": "/media/breezy/Disk3/DevConnect/devconnect2.0/backend/backend.csproj",
-      "packagesPath": "/home/breezy/.nuget/packages/",
-      "outputPath": "/media/breezy/Disk3/DevConnect/devconnect2.0/backend/obj/",
+      "projectPath": "F:\\Github\\devconnect2.0\\backend\\backend.csproj",
+      "packagesPath": "C:\\Users\\joan_\\.nuget\\packages\\",
+      "outputPath": "F:\\Github\\devconnect2.0\\backend\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/breezy/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\joan_\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -3599,7 +3599,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.401/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

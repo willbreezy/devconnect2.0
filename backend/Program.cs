@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 
 var builder = WebApplication.CreateBuilder(args);
-var connectionString = builder.Configuration.GetConnectionString("DevConnectDatabase");
+var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 
 // Add services to the container.
 builder.Services.AddControllers();
@@ -13,7 +13,7 @@ builder.Services.AddSingleton<DatabaseContext>();
 
 // Ajout du DbConext avec SQLite
 builder.Services.AddDbContext<DevConnectContext>(options => options.UseSqlite(
-    "Data Source=devconnect.db; Pooling=True; Max Pool Size=100; Min Pool Size=5;"
+    "Data Source=devconnect.db; Pooling=True;"
 ));
 
 //Configuration des services JWT
@@ -40,9 +40,17 @@ var app = builder.Build();
 if (app.Environment.IsDevelopment())
 {   
     app.UseDeveloperExceptionPage();
+} 
+else
+{
+    app.UseExceptionHandler("Home/Error");
+    app.UseHsts();
 }
 
 app.UseHttpsRedirection();
+app.UseStaticFiles();
+app.UseRouting();
+app.UseAuthentication();
 app.UseAuthorization();
 app.MapControllers();
 

@@ -23,7 +23,7 @@ namespace backend.models
         [MinLength(8, ErrorMessage = "Le mot de passe doit contenir au moins 8 caractères.")]
         public  string Password { get; set; }
 
-        public string Avatar { get; set; } // champ facultatif
+        public string? Avatar { get; set; } // champ facultatif
 
         [DataType(DataType.DateTime)]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
