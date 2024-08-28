@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace backend.Repositories
 {
-    public class PostRepository
+    public class PostRepository : IPostRepository
     {
         private readonly DevConnectContext _context;
 
