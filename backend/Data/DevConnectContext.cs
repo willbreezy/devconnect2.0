@@ -27,7 +27,7 @@ namespace backend.data
             {
                 // Configure SQLite as the database provider
                 
-                optionsBuilder.UseSqlite("Data Source=devconnect.db; Pooling=True; Max Pool Size=100; Min Pool Size=5;");
+                optionsBuilder.UseSqlite("Data Source=devconnect.db; Pooling=True;");
             }
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)

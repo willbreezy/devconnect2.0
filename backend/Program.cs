@@ -1,5 +1,6 @@
 using System.Text;
 using backend.data;
+using backend.Repositories;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
@@ -15,6 +16,11 @@ builder.Services.AddSingleton<DatabaseContext>();
 builder.Services.AddDbContext<DevConnectContext>(options => options.UseSqlite(
     "Data Source=devconnect.db; Pooling=True;"
 ));
+
+// Enregistrement de UserRepository, ProfileRepository et PostRepository
+builder.Services.AddScoped<IUserRepository, UserRepository>();
+builder.Services.AddScoped<IProfileRepository, ProfileRepository>();
+builder.Services.AddScoped<IPostRepository, PostRepository>();
 
 //Configuration des services JWT
 builder.Services.AddAuthentication(options => 

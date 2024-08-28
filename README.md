@@ -28,9 +28,9 @@ DevConnect est une application web de réseau social pour développeurs, permett
 DevConnect utilise les technologies suivantes :
 
 - **Frontend** : HTML, CSS, JavaScript, React
-- **Backend** : C# 
+- **Backend** : C# , avec des accès Rest depuis react
 - **Base de données** : SQLite
-- **Autres** : Axios pour les requêtes HTTP, Material-UI pour les composants UI
+- **Autres** : Axios pour les requêtes HTTP, Material-UI pour les composants UI, pool de connexions ADO.NET
 
 ## Installation
 
